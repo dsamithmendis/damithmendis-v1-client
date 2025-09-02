@@ -1,0 +1,1 @@
+export const Tabs: string[] = ["Film", "Free Time", "Archviz", "Sketch"];
