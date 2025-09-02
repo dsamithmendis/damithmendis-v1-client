@@ -6,16 +6,15 @@ type FilmItem = {
   title: string;
   image: string;
 };
-
-interface BottomSectionProps {
+interface FilmTabProps {
   activeTab: string;
   FilmItems: FilmItem[];
 }
 
-export default function BottomSection({
+export default function FilmTab({
   activeTab,
   FilmItems,
-}: BottomSectionProps) {
+}: FilmTabProps) {
   return (
     <section className="flex-1 bg-[#000000] text-white">
       {activeTab === "Film" && (

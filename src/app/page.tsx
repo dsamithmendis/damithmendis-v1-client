@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import BottomSection from "@/components/tabs/film";
+import FilmTab from "@/components/tabs/film";
 
 type FilmItem = {
   title: string;
   image: string;
 };
 
-const portfolioItems: FilmItem[] = [
+const FilmItems: FilmItem[] = [
   { title: "SnowMan", image: "/images/1.jpg" },
   { title: "The Clocks", image: "/images/2.jpg" },
   { title: "Love", image: "/images/3.jpg" },
@@ -54,7 +54,7 @@ export default function Home() {
       </section>
 
       {/* === Bottom Section (imported) === */}
-      <BottomSection activeTab={activeTab} FilmItems={portfolioItems} />
+      <FilmTab activeTab={activeTab} FilmItems={FilmItems} />
     </div>
   );
 }
