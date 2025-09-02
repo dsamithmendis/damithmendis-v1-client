@@ -14,7 +14,7 @@ export default function Header({ tabs, activeTab, setActiveTab }: HeaderProps) {
       {/* Profile */}
       <div className="w-32 h-32 relative rounded-full overflow-hidden border border-gray-700">
         <Image
-          src="/images/1.jpg"
+          src="/images/profile.jpg"
           alt="Profile"
           fill
           className="object-cover"
