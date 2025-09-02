@@ -3,24 +3,10 @@
 import Image from "next/image";
 import { useState } from "react";
 import FilmTab from "@/components/tabs/film";
-
-type FilmItem = {
-  title: string;
-  image: string;
-};
-
-const FilmItems: FilmItem[] = [
-  { title: "SnowMan", image: "/images/1.jpg" },
-  { title: "The Clocks", image: "/images/2.jpg" },
-  { title: "Love", image: "/images/3.jpg" },
-  { title: "Car", image: "/images/4.jpg" },
-  { title: "Old Man", image: "/images/5.jpg" },
-  { title: "Candy House", image: "/images/1.jpg" },
-];
+import { FilmItems, tabs } from "@/lib/film-data";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("Film");
-  const tabs = ["Film", "Free Time", "Archviz", "Sketch"];
 
   return (
     <div className="min-h-screen flex flex-col">
