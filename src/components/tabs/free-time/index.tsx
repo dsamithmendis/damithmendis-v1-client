@@ -9,7 +9,6 @@ type FreeTimeItem = {
   title: string;
   image: string;
 };
-
 interface FreeTimeTabProps {
   activeTab: string;
   FreeTimeItems: FreeTimeItem[];
@@ -28,7 +27,6 @@ export default function FreeTimeTab({ activeTab, FreeTimeItems }: FreeTimeTabPro
     </section>
   );
 }
-
 interface AnimatedFreeTimeItemProps {
   item: FreeTimeItem;
   index: number;

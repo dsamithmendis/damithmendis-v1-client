@@ -5,12 +5,10 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-
 type FilmItem = {
   title: string;
   image: string;
 };
-
 interface FilmTabProps {
   activeTab: string;
   FilmItems: FilmItem[];
@@ -29,7 +27,6 @@ export default function FilmTab({ activeTab, FilmItems }: FilmTabProps) {
     </section>
   );
 }
-
 interface AnimatedFilmItemProps {
   item: FilmItem;
   index: number;
