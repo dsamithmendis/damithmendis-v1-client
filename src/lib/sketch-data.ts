@@ -1,6 +1,6 @@
-import { FreeTimeItem } from "@/types/free-time.types";
+import { SketchItem } from "@/types/sketch.types";
 
-export const FreeTimeItems: FreeTimeItem[] = [
+export const SketchItems: SketchItem[] = [
   { title: "SnowMan", image: "/images/free-time/1.jpg" },
   { title: "The Clocks", image: "/images/free-time/2.jpg" },
   { title: "Love", image: "/images/free-time/1.jpg" },
