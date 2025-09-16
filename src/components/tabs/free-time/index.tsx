@@ -103,7 +103,7 @@ function AnimatedFreeTimeItem({
           src={item.image}
           alt={item.title}
           fill
-          className="object-cover"
+          className="object-cover rounded-lg"
         />
       </div>
       <p className="mt-3 text-sm font-light md:text-lg text-[#cccccc] font-robotoSlab">
