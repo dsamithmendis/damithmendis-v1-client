@@ -22,8 +22,8 @@ export default function FilmTab({ activeTab, FilmItems }: FilmTabProps) {
   if (activeTab !== "Film") return null;
 
   return (
-    <section className="flex-1 bg-[#000000] text-[#cccccc]">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 lg:px-20 py-16 place-items-center">
+    <section className="w-full bg-[#000000] text-[#cccccc]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 lg:px-20 py-16">
         {FilmItems.map((item, idx) => (
           <div key={idx} className="w-full">
             <AnimatedFilmItem
@@ -41,7 +41,7 @@ export default function FilmTab({ activeTab, FilmItems }: FilmTabProps) {
                 animate={{ opacity: 1, y: 0 }}
                 className="mt-4 p-4 bg-[#111111] rounded-lg shadow-lg"
               >
-                <h2 className="text-xl md:text-2xl font-robotoSlab font-semibold">
+                <h2 className="text-sm md:text-xl font-robotoSlab font-light">
                   {item.title}
                 </h2>
                 <p className="mt-2 text-sm md:text-base font-light">
@@ -93,12 +93,12 @@ function AnimatedFilmItem({
       }`}
       onClick={onClick}
     >
-      <div className="w-72 h-52 lg:w-86 lg:h-72 relative overflow-hidden shadow-lg">
+      <div className="w-72 h-52 lg:w-86 lg:h-72 relative overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 hover:opacity-80">
         <Image
           src={item.image}
           alt={item.title}
           fill
-          className="object-cover"
+          className="object-cover rounded-lg"
         />
       </div>
       <p className="mt-3 font-light text-sm md:text-lg text-[#cccccc] font-robotoSlab">

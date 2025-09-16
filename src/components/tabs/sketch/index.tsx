@@ -98,7 +98,7 @@ function FullScreenModal({ item, onClose }: FullScreenModalProps) {
         className="absolute top-2 z-50 right-2 text-white text-3xl hover:text-red-500 transition-colors"
         onClick={onClose}
       >
-        <RiCloseLine className="cursor-pointer bg-white/10 rounded-full"/>
+        <RiCloseLine className="h-8 w-8 p-2 cursor-pointer bg-white/10 rounded-full" />
       </button>
       <div className="relative w-full max-w-4xl h-full max-h-[80vh] md:max-h-[120vh]">
         <Image src={item.image} alt={item.title} fill className="object-contain" />
