@@ -4,7 +4,13 @@ import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { ArchvizItem } from "@/types/archviz.types";
+
+type ArchvizItem = {
+  title: string;
+  image: string;
+  description?: string;
+};
+
 interface ArchvizTabProps {
   activeTab: string;
   ArchvizItems: ArchvizItem[];
@@ -52,6 +58,7 @@ export default function ArchvizTab({
     </section>
   );
 }
+
 interface AnimatedArchvizItemProps {
   item: ArchvizItem;
   index: number;
