@@ -5,11 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { RiCloseLine } from "react-icons/ri";
-
-type SketchItem = {
-  title: string;
-  image: string;
-};
+import { SketchItem } from "@/types/sketch.types";
 interface SketchTabProps {
   activeTab: string;
   SketchItems: SketchItem[];
@@ -34,12 +30,14 @@ export default function SketchTab({ activeTab, SketchItems }: SketchTabProps) {
       </div>
 
       {selectedItem && (
-        <FullScreenModal item={selectedItem} onClose={() => setSelectedItem(null)} />
+        <FullScreenModal
+          item={selectedItem}
+          onClose={() => setSelectedItem(null)}
+        />
       )}
     </section>
   );
 }
-
 interface AnimatedSketchItemProps {
   item: SketchItem;
   index: number;
@@ -77,7 +75,12 @@ function AnimatedSketchItem({ item, index, onClick }: AnimatedSketchItemProps) {
       onClick={onClick}
     >
       <div className="w-72 h-52 lg:w-86 lg:h-72 relative overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 hover:opacity-80">
-        <Image src={item.image} alt={item.title} fill className="object-cover" />
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          className="object-cover"
+        />
       </div>
       <p className="mt-3 text-sm font-light md:text-lg text-[#cccccc] font-robotoSlab">
         {item.title}
@@ -98,10 +101,15 @@ function FullScreenModal({ item, onClose }: FullScreenModalProps) {
         className="absolute top-2 z-50 right-2 text-white text-3xl hover:text-red-500 transition-colors"
         onClick={onClose}
       >
-        <RiCloseLine className="cursor-pointer bg-white/10 rounded-full"/>
+        <RiCloseLine className="cursor-pointer bg-white/10 rounded-full" />
       </button>
       <div className="relative w-full max-w-4xl h-full max-h-[80vh] md:max-h-[120vh]">
-        <Image src={item.image} alt={item.title} fill className="object-contain" />
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          className="object-contain"
+        />
       </div>
     </div>
   );
