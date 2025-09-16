@@ -4,7 +4,13 @@ import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { FreeTimeItem } from "@/types/free-time.types";
+
+type FreeTimeItem = {
+  title: string;
+  image: string;
+  description?: string;
+};
+
 interface FreeTimeTabProps {
   activeTab: string;
   FreeTimeItems: FreeTimeItem[];
@@ -51,6 +57,7 @@ export default function FreeTimeTab({
     </section>
   );
 }
+
 interface AnimatedFreeTimeItemProps {
   item: FreeTimeItem;
   index: number;
