@@ -1,20 +1,17 @@
 @import "tailwindcss";
 
+@layer inline {
+  .font-karla {
+    font-family: var(--font-karla), sans-serif;
+  }
+  .font-robotoSlab {
+    font-family: var(--font-roboto-slab), serif;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #000000;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #ffffff;
-  }
 }
 
 body {
