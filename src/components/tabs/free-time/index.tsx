@@ -105,12 +105,12 @@ function AnimatedFreeTimeItem({
       }`}
       onClick={onClick}
     >
-      <div className="w-72 h-52 lg:w-86 lg:h-72 relative overflow-hidden shadow-lg">
+      <div className="w-72 h-52 lg:w-86 lg:h-72 relative overflow-hidden rounded-lg shadow-lg">
         <Image
           src={item.image}
           alt={item.title}
           fill
-          className="object-cover rounded-lg"
+          className="object-cover rounded-lg hover:scale-105 transition-transform duration-300 hover:opacity-80"
         />
       </div>
       <p className="mt-3 text-sm font-light md:text-lg text-[#cccccc] font-robotoSlab">
